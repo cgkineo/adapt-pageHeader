@@ -1,0 +1,62 @@
+{{! make the _globals object in course.json available to this template}}
+{{import_globals}}
+
+<div class="pageheader__inner">
+
+  {{#if _hasTextBelowImage}}
+  <div class="pageheader__image-container">
+    <img class="pageheader__image js-pageheader-image" {{#if _image.alt}}alt="{{_image.alt}}"{{/if}}/>
+  </div>
+  {{/if}}
+
+  {{#any displayTitle subtitle body instruction}}
+  <div class="pageheader__header">
+    <div class="pageheader__header-inner">
+
+      {{#if displayTitle}}
+      <div class="pageheader__title">
+
+        {{#unless _disableAccessibilityState}}
+        <div class="js-heading" data-a11y-heading-type="page"></div>
+        {{/unless}}
+
+        <div class="pageheader__title-inner" {{#unless _disableAccessibilityState}}aria-hidden="true"{{/unless}}>
+          {{{compile displayTitle}}}
+        </div>
+
+      </div>
+      {{/if}}
+
+      {{#if subtitle}}
+      <div class="pageheader__subtitle">
+        <div class="pageheader__subtitle-inner">
+          {{{compile subtitle}}}
+        </div>
+      </div>
+      {{/if}}
+
+      {{#any body pageBody}}
+      <div class="pageheader__body">
+        <div class="pageheader__body-inner">
+          {{#if pageBody}}
+          {{{compile pageBody}}}
+          {{else}}
+          {{{compile body}}}
+          {{/if}}
+        </div>
+      </div>
+      {{/any}}
+
+      {{#if instruction}}
+      <div class="pageheader__instruction">
+        <div class="pageheader__instruction-inner">
+          {{{compile instruction}}}
+        </div>
+      </div>
+      {{/if}}
+
+    </div>
+  </div>
+  {{/any}}
+
+</div>

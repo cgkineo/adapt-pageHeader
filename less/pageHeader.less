@@ -1,0 +1,45 @@
+.pageheader {
+  &.text-align-vert-center {
+    align-self: center;
+  }
+
+  &.text-align-vert-bottom {
+    align-self: flex-end;
+  }
+
+  &__header-inner {
+    .l-container-padding(@block-padding-ver, @block-padding-hoz);
+  }
+}
+
+
+//----------------------
+// Theme
+//----------------------
+.pageheader {
+  &__title {
+    margin-bottom: @page-title-margin;
+    .page-title;
+    color: @heading-color;
+  }
+
+  &__subtitle {
+    margin-bottom: @page-subtitle-margin;
+    .page-subtitle;
+  }
+
+  &__body {
+    margin-bottom: @page-body-margin;
+    .page-body;
+  }
+
+  &__instruction {
+    margin-bottom: @page-instruction-margin;
+    .page-instruction;
+  }
+
+  &__body a,
+  &__instruction a {
+    .link-text;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "adapt-pageHeader",
+  "framework": ">=5.3",
+  "version": "1.0.0",
+  "homepage": "https://github.com/kineojen/adapt-pageHeader",
+  "issues": "https://github.com/kineojen/adapt-pageHeader/issues/",
+  "displayName": "pageHeader",
+  "component": "pageHeader",
+  "description": "Text that can be positioned over or under a configurable background image",
+  "main": "/js/adapt-pageHeader.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0"
+}

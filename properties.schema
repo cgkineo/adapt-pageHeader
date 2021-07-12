@@ -1,0 +1,164 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the subtitle text",
+      "translatable": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_extendComponentContainer": {
+      "type": "boolean",
+      "required": true,
+      "default": false,
+      "title": "Extend Component Container?",
+      "inputType": "Checkbox",
+      "validators": [],
+      "help": "When true, image container is extended to block width. When false, image container is confined to component width."
+    },
+    "_hasTextBelowImage": {
+      "type": "boolean",
+      "required": true,
+      "default": false,
+      "title": "Text Below Image?",
+      "inputType": "Checkbox",
+      "validators": [],
+      "help": "When true, text appears below an <img> tag. When false, text appears over background image."
+    },
+    "_image": {
+      "type": "object",
+      "required": false,
+      "legend": "Header image",
+      "properties": {
+        "alt": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "title": "Alternative Text",
+          "inputType": "Text",
+          "validators": [],
+          "help": "The alternative text for this image",
+          "translatable": true
+        },
+        "_large": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "inputType": "Asset:image",
+          "validators": [],
+          "help": "The large sized image for desktop devices"
+        },
+        "_medium": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "inputType": "Asset:image",
+          "validators": [],
+          "help": "The small sized image for mobile devices"
+        },
+        "_small": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "inputType": "Asset:image",
+          "validators": [],
+          "help": "The small sized image for mobile devices"
+        }
+      }
+    },
+    "_backgroundStyles": {
+      "type": "object",
+      "required": false,
+      "legend": "Header background image styles",
+      "properties": {
+        "_backgroundRepeat": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "inputType": {"type":"Select", "options":["repeat","repeat-x","repeat-y","no-repeat"]},
+          "title": "Set if/how the background image repeats",
+          "help": "Repeat-x: The background image is repeated only horizontally. Repeat-y: The background image is repeated only vertically."
+        },
+        "_backgroundSize": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "inputType": {"type":"Select", "options":["auto","cover","contain"]},
+          "title": "Set the size of the background image",
+          "help": "Auto: The background image is displayed in its original size. Cover: Resize the background image to cover the entire container, even if it has to stretch or crop the image. Contain: Resize the background image to make sure the image is fully visible."
+        },
+        "_backgroundPosition": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "inputType": {"type":"Select", "options":["left top","left center","left bottom","center top","center center","center bottom","right top","right center","right bottom"]},
+          "title": "Set the position of the background image",
+          "help": "The first value is the horizontal position and the second value is the vertical."
+        }
+      }
+    },
+    "_minimumHeights": {
+      "type": "object",
+      "required": false,
+      "legend": "Page header minimum height",
+      "properties": {
+        "_large": {
+          "type": "number",
+          "required": false,
+          "default": "",
+          "inputType": "Number",
+          "validators": ["number"],
+          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+        },
+        "_medium": {
+          "type": "number",
+          "required": false,
+          "default": "",
+          "inputType": "Number",
+          "validators": ["number"],
+          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+        },
+        "_small": {
+          "type": "number",
+          "required": false,
+          "default": "",
+          "inputType": "Number",
+          "validators": ["number"],
+          "help": "Minimum height should only be used in instances where the page header height needs to be greater than the content e.g. to prevent a background image being cropped"
+        }
+      }
+    }
+  }
+}
