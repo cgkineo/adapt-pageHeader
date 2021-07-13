@@ -6,17 +6,20 @@
   &.text-align-vert-bottom {
     align-self: flex-end;
   }
-
-  &__header-inner {
-    .l-container-padding(@block-padding-ver, @block-padding-hoz);
-  }
 }
 
-
-//----------------------
+// --------------------------------------------------
 // Theme
-//----------------------
+// --------------------------------------------------
 .pageheader {
+  &:not(.has-text-below-image) &__header-inner {
+    .l-container-responsive(@device-width-large);
+  }
+
+  &__header-inner {
+    .l-container-padding(@page-header-padding-ver, @page-header-padding-hoz);
+  }
+
   &__title {
     margin-bottom: @page-title-margin;
     .page-title;
