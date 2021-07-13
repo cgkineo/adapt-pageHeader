@@ -2,10 +2,10 @@
   "name": "adapt-pageHeader",
   "framework": ">=5.3",
   "version": "1.0.0",
-  "homepage": "https://github.com/kineojen/adapt-pageHeader",
-  "issues": "https://github.com/kineojen/adapt-pageHeader/issues/",
-  "displayName": "pageHeader",
+  "homepage": "https://github.com/cgkineo/adapt-pageHeader",
+  "issues": "https://github.com/cgkineo/adapt-pageHeader/issues/",
   "component": "pageHeader",
+  "displayName": "pageHeader",
   "description": "Text that can be positioned over or under a configurable background image",
   "main": "/js/adapt-pageHeader.js",
   "keywords": [
