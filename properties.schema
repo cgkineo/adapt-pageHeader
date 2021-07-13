@@ -42,11 +42,11 @@
     "_extendComponentContainer": {
       "type": "boolean",
       "required": true,
-      "default": false,
+      "default": true,
       "title": "Extend Component Container?",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "When true, image container is extended to block width. When false, image container is confined to component width."
+      "help": "When true, removes the max width of the parent block and expands the component to fill the entire width of the block. When false, inherits the default block max width."
     },
     "_hasTextBelowImage": {
       "type": "boolean",
@@ -55,7 +55,7 @@
       "title": "Text Below Image?",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "When true, text appears below an <img> tag. When false, text appears over background image."
+      "help": "When true, image appears in an <img> element above the pageHeader text. When false, image is set as a background-image on the component container element."
     },
     "_image": {
       "type": "object",
