@@ -5,7 +5,7 @@
 
   {{#if _hasTextBelowImage}}
   <div class="pageheader__image-container">
-    <img class="pageheader__image js-pageheader-image" {{#if _image.alt}}alt="{{_image.alt}}"{{/if}}/>
+    <img class="pageheader__image js-pageheader-image" {{#if _image.alt}} zaria-label="{{{compile_a11y_normalize _image.alt}}}"{{/if}} />
   </div>
   {{/if}}
 
@@ -13,47 +13,47 @@
   <div class="pageheader__header">
     <div class="pageheader__header-inner">
 
-      {{#if displayTitle}}
-      <div class="pageheader__title">
+      <div class="pageheader__content">
 
-        {{#unless _disableAccessibilityState}}
-        <div class="js-heading" data-a11y-heading-type="page"></div>
-        {{/unless}}
+        {{#if displayTitle}}
+        <div class="pageheader__title">
 
-        <div class="pageheader__title-inner" {{#unless _disableAccessibilityState}}aria-hidden="true"{{/unless}}>
-          {{{compile displayTitle}}}
+          {{#unless _disableAccessibilityState}}
+          <div class="js-heading" data-a11y-heading-type="page"></div>
+          {{~/unless~}}
+
+          <div class="pageheader__title-inner"{{#unless _disableAccessibilityState}} aria-hidden="true"{{/unless}}>
+            {{~{compile displayTitle}~}}
+          </div>
+
         </div>
+        {{/if}}
+
+        {{#if subtitle}}
+        <div class="pageheader__subtitle">
+          <div class="pageheader__subtitle-inner">
+            {{{compile subtitle}}}
+          </div>
+        </div>
+        {{/if}}
+
+        {{#if body}}
+        <div class="pageheader__body">
+          <div class="pageheader__body-inner">
+            {{{compile body}}}
+          </div>
+        </div>
+        {{/if}}
+
+        {{#if instruction}}
+        <div class="pageheader__instruction">
+          <div class="pageheader__instruction-inner">
+            {{{compile instruction}}}
+          </div>
+        </div>
+        {{/if}}
 
       </div>
-      {{/if}}
-
-      {{#if subtitle}}
-      <div class="pageheader__subtitle">
-        <div class="pageheader__subtitle-inner">
-          {{{compile subtitle}}}
-        </div>
-      </div>
-      {{/if}}
-
-      {{#any body pageBody}}
-      <div class="pageheader__body">
-        <div class="pageheader__body-inner">
-          {{#if pageBody}}
-          {{{compile pageBody}}}
-          {{else}}
-          {{{compile body}}}
-          {{/if}}
-        </div>
-      </div>
-      {{/any}}
-
-      {{#if instruction}}
-      <div class="pageheader__instruction">
-        <div class="pageheader__instruction-inner">
-          {{{compile instruction}}}
-        </div>
-      </div>
-      {{/if}}
 
     </div>
   </div>
