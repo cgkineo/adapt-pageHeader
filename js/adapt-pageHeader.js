@@ -29,11 +29,9 @@ define([
 
     processImages() {
       const images = this.model.get("_image");
-
       if (!images) return;
 
       const isImg = this.model.get("_hasTextBelowImage");
-
       const image = images[`_${Adapt.device.screenSize}`];
 
       isImg ? this.setImage(image) : this.setBackgroundImage(image);
@@ -57,7 +55,6 @@ define([
 
     setMinimumHeight($parent) {
       const minimumHeights = this.model.get("_minimumHeights");
-
       if (!minimumHeights) return;
 
       const minimumHeight = minimumHeights[`_${Adapt.device.screenSize}`];
@@ -69,7 +66,6 @@ define([
 
     setBackgroundStyles($parent) {
       const backgroundStyles = this.model.get("_backgroundStyles");
-
       if (!backgroundStyles) return;
 
       $parent
@@ -82,10 +78,11 @@ define([
 
     extendComponentContainer() {
       const extend = this.model.get("_extendComponentContainer");
-
       if (!extend) return;
 
-      this.$el.parents(".block__inner").css("maxWidth", "100%");
+      this.$el
+        .addClass("has-extend-container")
+        .parents(".block__inner").css("maxWidth", "100%");
     }
 
     removeBlockPadding() {
