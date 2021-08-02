@@ -10,7 +10,7 @@ The component comes with four predefined configuration options for the page head
 
 * Image (within content width) with text overlaid
 * Image (within content width) with text below
-* Image (outside of content width) with text text overlaid
+* Image (outside of content width) with text overlaid
 * Image (outside of content width) with text below
 
 ## Settings Overview
