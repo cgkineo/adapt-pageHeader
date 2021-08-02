@@ -5,6 +5,14 @@
 ### When to use
 Use **pageHeader** in place of the built-in theme page header functionality for both the Framework and the Authoring Tool. Use with the built-in v5 theme class `hide-page-header`. The use of the **pageHeader** component does not impact the menu header, which must be defined by the menu plugin itself.
 
+### What's included
+The component comes with four predefined configuration options for the page header. They are:
+
+* Image (within content width) with text overlaid
+* Image (within content width) with text below
+* Image (outside of content width) with text text overlaid
+* Image (outside of content width) with text below
+
 ## Settings Overview
 
 The attributes listed below are used in *components.json* to configure **pageHeader**, and are properly formatted as JSON in [*example.json*](https://github.com/cgkineo/adapt-pageHeader/blob/master/example.json).
