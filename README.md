@@ -3,7 +3,7 @@
 **pageHeader** is a *presentation component* that can be used at the top of a page to provide page header functionality (text and image or background image).
 
 ### When to use
-Use **pageHeader** in place of the built-in theme page header functionality for both the Framework and the Authoring Tool. Use with the built-in v5 theme class `hide-page-header`.
+Use **pageHeader** in place of the built-in theme page header functionality for both the Framework and the Authoring Tool. Use with the built-in v5 theme class `hide-page-header`. The use of the **pageHeader** component does not impact the menu header, which must be defined by the menu plugin itself.
 
 ## Settings Overview
 
@@ -56,10 +56,10 @@ The attributes listed below are used in *components.json* to configure **pageHea
 **text-align-vert-bottom**: Vertically aligns component to bottom in component container. **Only used when `"_hasTextBelowImage": false`.**
 
 ----------------------------
-**Version number:**  1.0.0<br>
-**Framework versions:**  5.3+<br>
-**Vanilla versions:**  5.2+<br>
-**Author / maintainer:**  Kineo<br>
-**Accessibility support:**  WAI AA<br>
-**RTL support:**  Yes<br>
-**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 12+13 for macOS/iOS/iPadOS, Opera<br>
+**Version number:**  1.0.0<br/>
+**Framework versions:**  5.3+<br/>
+**Vanilla versions:**  5.2+<br/>
+**Author / maintainer:**  Kineo<br/>
+**Accessibility support:**  WAI AA<br/>
+**RTL support:**  Yes<br/>
+**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 12+13 for macOS/iOS/iPadOS, Opera<br/>
